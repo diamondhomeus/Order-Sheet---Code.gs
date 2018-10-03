@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  
+  <script>
+        function myColor()
+        {
+             
+
+            
+            var e = document.getElementById("colorDrop");
+            var colorName = e.options[e.selectedIndex].text;
+            document.getElementById("form1").innerHTML="Please wait..."
+            google.script.run.withSuccessHandler(atSuccess2).colorInvnetory(colorName);
+
+     
+
+
+
+
+        }
+  
+  
+      function atSuccess2()
+      {
+           google.script.host.close();      
+      }
+      
+  
+  </script>
+  
+  
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <form id="form1">
+           <select id="colorDrop">
+                <option value="Red">Red</option>
+                <option value="Orange">Orange</option>
+                <option value="Red">Light Purple 1</option>
+                <option value="Red">Dark Yellow 1</option>
+                <option value="Red">Reset</option>
+          </select>
+          <input type="button" id= "button1" value="Apply" alignment="center" onclick="myColor();" />  
+    </form>
+             
+       
+    
+    
+    
+
+    
+    
+    
+  </body>
+</html>
+
+
